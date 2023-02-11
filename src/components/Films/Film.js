@@ -3,6 +3,8 @@ import { Films } from '../../shared/ListOfFilms'
 import { useState } from 'react';
 import './Film.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom'
+import Detail from '../../components/Detail/Detail'
 export default function Film() {
     const [film, setFilm] = useState([])
     return (
@@ -14,11 +16,8 @@ export default function Film() {
                             <img src={film.img} alt='' />
                             <h3>{film.title} - {film.nation}</h3>
                             <p className='title'>{film.year}</p>
-                            <button onClick={() => { setFilm(film) }}>
-                                <a href='#popup1' id='openPopup'>
-
-
-                                    Detail</a></button>
+                            <Link to={`Detail/${film.id}`}>
+                                <p> <button>Detail</button></p></Link>
                         </div>
                     </div>
                 ))}
@@ -33,6 +32,6 @@ export default function Film() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }

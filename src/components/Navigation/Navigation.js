@@ -1,6 +1,7 @@
 import React from 'react'
 import { useContext } from 'react'
 import { ThemeContext } from '../ThemeContext/ThemeContext'
+import { NavLink } from 'react-router-dom'
 import './Navigation.css'
 export default function Navigation() {
     const { theme, toggle, dark } = useContext(ThemeContext)
@@ -12,7 +13,7 @@ export default function Navigation() {
                     color: theme.color,
                     outline: 'none'
                 }} >
-                    <li><a className='active' href='#home' style={{ color: theme.color }}>Home</a></li>
+                    <li><NavLink to='/' style={{ color: theme.color }}>Home</NavLink></li>
                     <li><a className='active' href='#news' style={{ color: theme.color }}>News</a></li>
                     <li><a className='active' href='#about' style={{ color: theme.color }}>About</a></li>
                     <li><a className='active' href='#contact' style={{ color: theme.color }}>Contact</a></li>
