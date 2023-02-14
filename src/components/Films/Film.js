@@ -21,16 +21,6 @@ export default function Film() {
                         </div>
                     </div>
                 ))}
-                <div id='popup1' className='overlay'>
-                    <div className='popup'>
-                        <img src={film.img} alt='' />
-                        <h2>{film.name}</h2>
-                        <a className='close' href='#cl'>&times;</a>
-                        <div className='content'>
-                            {film.info}
-                        </div>
-                    </div>
-                </div>
             </div>
         </div >
     );
